@@ -4,13 +4,16 @@ include_once __DIR__ . '/Product.php';
 
 class PetSleep extends Product {
 
-    public $lenght;
+    public $width;
     public $height;
+    public $depth;
 
-    function __construct($dimensions)
+    function __construct($param, $dimensions)
     {
+        parent::__construct($param);
+
+        $this->width = $dimensions['width'];
         $this->height = $dimensions['height'];
-        $this->widht = $dimensions['width'];
         $this->depth = $dimensions['depth'];
     }
 }
