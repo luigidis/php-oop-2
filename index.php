@@ -2,6 +2,8 @@
 
 include_once __DIR__ . '/PetFood.php';
 include_once __DIR__ . '/PetSleep.php';
+include_once __DIR__ . '/PetGames.php';
+include_once __DIR__ . '/User.php';
 
 
 
@@ -75,6 +77,19 @@ $xb_nest = new PetSleep ($cat_nest, $cat_nest_dimensions);
 
 var_dump($sleep_dogs, $xb_nest);
 
+//Primo giocattolo
+
+$dog_toy_first = [
+    "name" => "Rubbe Ball",
+    "price" => "11.18",
+    "brand" => "Sheens",
+    "description" => "Giocando a masticare",
+    "weight" => 40 . 'g',
+];
+
+$rubbe = new PetGames($dog_toy_first, 'Gomma ultra resistente');
+
+var_dump($rubbe);
 
 
 // $cat_nest = [
@@ -84,3 +99,5 @@ var_dump($sleep_dogs, $xb_nest);
 //     "description" =>
 //     "weight" =>
 // ];
+
+var_dump($user_one);
