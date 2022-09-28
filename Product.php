@@ -14,7 +14,7 @@ class Product
     function __construct($param)
     {
         $this->name = $param['name'];
-        $this->price = $param['price'];
+        $this->setPrice($param);
         $this->brand = $param['brand'];
         // $this->media = $param['media'];
         $this->description = $param['description'];
@@ -22,8 +22,14 @@ class Product
         // $this->volume = $param['volume'];
         // $this->categories = $param['categories'];
     }
-
-    public function setPrice($price)
+    
+    public function setPrice($param)
     {
+        if ($param['price'] >= 0 && is_numeric($param['price'])) {
+
+            $this->price = $param['price'];
+        } else {
+            throw new Exception('Errore nel prezzo');
+        }
     }
 }

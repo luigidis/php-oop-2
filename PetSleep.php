@@ -15,4 +15,4 @@ class PetSleep extends Product
     }
 }
 
-//Domanda quindo io vado a usare un trait non posso usare poi il costruttore per andarte a modificare ciò che c'è scritto nel trait?
+//Domanda quando io vado a usare un trait non posso usare poi il costruttore per andarte a modificare ciò che c'è scritto nel trait?

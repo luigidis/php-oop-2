@@ -52,7 +52,7 @@ $croccantini_natural->setDimensions(15,12,8);
 //Letto cane 
 $bedsure_sleep = [
     "name" => "Letto per Cani",
-    "price" =>  65.99,
+    "price" =>  'ciao',
     "brand" => "Bedsure",
     "description" => "Divano per Cani Taglia grande in Foam",
     "weight" => 0.5 . 'kg',
@@ -74,9 +74,12 @@ $cat_nest = [
 
 
 //Creo le istanze per PetSleep
-
-$sleep_dogs = new PetSleep($bedsure_sleep);
-$sleep_dogs->setDimensions(89,63,18);
+try {
+    $sleep_dogs = new PetSleep($bedsure_sleep);
+    $sleep_dogs->setDimensions(89,63,18);
+} catch(Exception $e) {
+    echo $e->getMessage();
+};
 $xb_nest = new PetSleep ($cat_nest);
 $xb_nest->setDimensions(32,39,60);
 
@@ -100,7 +103,7 @@ $dog_toy_first = [
 $rubbe = new PetGames($dog_toy_first, 'Gomma ultra resistente');
 $rubbe->setDimensions(50, 30, 20);
 
-// var_dump($rubbe);
+var_dump($rubbe);
 
 
 

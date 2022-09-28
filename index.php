@@ -56,6 +56,8 @@ for ($i = 0; $i < count($cart); $i++) {
 
 echo 'Final Price' . ' ' . $end_price . ' ' . 'Euro';
 
+// echo $crocchette->setPrice('ciao');
+
 
 
 // var_dump($cart);
