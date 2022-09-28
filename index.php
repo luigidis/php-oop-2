@@ -2,7 +2,7 @@
 
 include_once __DIR__ . '/db.php';
 
-
+include_once __DIR__ . '/Dimension.php';
 
 var_dump($crocchette, $carne_in_scatola, $croccantini_natural); //Istanze PetFood
 

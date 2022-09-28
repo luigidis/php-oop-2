@@ -1,19 +1,18 @@
 <?php
 
 include_once __DIR__ . '/Product.php';
+include_once __DIR__ . '/Dimension.php';
 
-class PetSleep extends Product {
+class PetSleep extends Product
+{
 
-    public $width;
-    public $height;
-    public $depth;
+    use Dimension;
 
-    function __construct($param, $dimensions)
+
+    function __construct($param)
     {
         parent::__construct($param);
-
-        $this->width = $dimensions['width'];
-        $this->height = $dimensions['height'];
-        $this->depth = $dimensions['depth'];
     }
 }
+
+//Domanda quindo io vado a usare un trait non posso usare poi il costruttore per andarte a modificare ciò che c'è scritto nel trait?

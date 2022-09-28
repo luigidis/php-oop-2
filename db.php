@@ -39,10 +39,13 @@ $data_natural = [
 // Creo le istanze per PetFood
 
 $crocchette = new PetFood($data_crocchette, '25/10/2023');
+$crocchette->setDimensions(10,15,25);
 
 $carne_in_scatola = new PetFood($data_carne, '08/05/2024');
+$carne_in_scatola->setDimensions(25,35,46);
 
 $croccantini_natural = new PetFood($data_natural, '15/09/2023');
+$croccantini_natural->setDimensions(15,12,8);
 
 // var_dump($crocchette, $carne_in_scatola, $croccantini_natural) ;
 
@@ -55,11 +58,7 @@ $bedsure_sleep = [
     "weight" => 0.5 . 'kg',
 ];
 
-$bedsure_dimensions = [
-    "width" =>  89 . 'cm',
-    "height" => 63 . 'cm',
-    "depth" => 18 . 'cm',
-];
+
 
 //Letto gatto
 
@@ -71,16 +70,15 @@ $cat_nest = [
     "weight" => 0.5 . 'kg',
 ];
 
-$cat_nest_dimensions = [
-    "width" =>  32 . 'cm',
-    "height" => 39 . 'cm',
-    "depth" => 60 . 'cm',
-];
+
+
 
 //Creo le istanze per PetSleep
 
-$sleep_dogs = new PetSleep($bedsure_sleep, $bedsure_dimensions);
-$xb_nest = new PetSleep ($cat_nest, $cat_nest_dimensions);
+$sleep_dogs = new PetSleep($bedsure_sleep);
+$sleep_dogs->setDimensions(89,63,18);
+$xb_nest = new PetSleep ($cat_nest);
+$xb_nest->setDimensions(32,39,60);
 
 // var_dump($sleep_dogs, $xb_nest);
 
@@ -93,10 +91,14 @@ $dog_toy_first = [
     "description" => "Giocando a masticare",
     "weight" => 40 . 'g',
 ];
+     
+
+
 
 //Creo le istanze per PetGames
 
 $rubbe = new PetGames($dog_toy_first, 'Gomma ultra resistente');
+$rubbe->setDimensions(50, 30, 20);
 
 // var_dump($rubbe);
 
